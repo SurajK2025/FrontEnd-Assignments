@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Form</title>
+
+    <style type="text/css">
+        body{
+            font-family: 'Open Sans Condensed', 'Helvetica Neue', sans-serif;
+            background-color: aquamarine;
+        }
+        h2, td.submit {
+            text-align: center;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            border-radius: 8px;
+        }
+        td.left {
+            text-align: right;
+            width: 400px;
+        }
+        td.right{
+            width: 400px;
+        }
+        input[type="text"] {
+            font-family: 'Open Sans Condensed', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            transition: 0.5s;
+            outline: none;
+            width: 80%;
+            padding: 8px 20px;
+        }
+        input[type="text"]:focus {
+            border: 2px solid #555;
+        }
+        input.button{
+            height: 40px;
+            width: 100px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: rgb(30, 136, 101);
+            color: white;
+        }
+        select {
+            width: 80%;
+            padding: 8px 20px;
+        }
+        textarea {
+            font-family: 'Open Sans Condensed', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            height: 60px;
+            width: 80%;
+            padding: 8px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Personal Information Form</h2>
+    <form action="">
+    <table cellpadding="5px">
+        <tr>
+            <td class="left">Name</td>
+            <td class="right"><input type="text" name="uName" class="box" placeholder="Enter your Name"></td>
+        </tr>
+        <tr>
+            <td class="left">Email</td>
+            <td class="right"><input type="text" name="uEmail" class="box" placeholder="Enter your Email"></td>
+        </tr>
+        <tr>
+            <td class="left">Age</td>
+            <td class="right"><input type="number" name="uAge" class="box" min=0 max=25 placeholder="Enter your Age"></td>
+        </tr>
+        <tr>
+            <td class="left">Which option best describes your current role?</td>
+            <td class="right"><select name="role" id="">
+                <option value="student">Student</option>
+                <option value="employee">Employee</option>
+                <option value="employer">Employer</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td valign="top" class="left">How likely is that you would recommend us to your friend?</td>
+            <td class="right">
+                <input type="radio" name="recommend" value="definetly" id="">Definetly 
+                <input type="radio" name="recommend" value="maybe" id="">Maybe 
+                <input type="radio" name="recommend" value="never" id="">Never <br>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" class="left">Things that should be improved in future.</td>
+            <td class="right"><input type="checkbox" name="front-end" id="">Front-End Projects<br>
+                <input type="checkbox" name="back-end" id="">Back-End Projects<br>
+                <input type="checkbox" name="data-visualization" id="">Data-Visualization Projects<br>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" class="left">Please describe your positive experience.</td>
+            <td class="right">
+                <textarea name="response" rows="5" placeholder="Enter your experience here ..."></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="submit">
+                <input type="submit" value="Submit" class="button">
+            </td>
+        </tr>
+    </table>
+    </form>     
+</body>
+</html>

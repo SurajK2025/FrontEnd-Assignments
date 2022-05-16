@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="flex">
+        <div id="content">
+            <div class="form">
+                <h2>Registration Form</h2>
+                <p>Lorem ipsum dolor sit amet elit.
+                    Sapiente sit aut eos consectetur adipisicing.</p>
+                <form action="https://www.google.com">
+                    <div class="form-row">
+                        <div class="form-subrow">
+                            <label for="name">Full Name</label>
+                            <input id="name" type="text" placeholder="e.g. FName LName" required>
+                        </div>
+                        <div class="form-subrow">
+                            <label for="lname">Gender</label>
+                            <div class="radio-container">
+                                <input id="male" name="gender" type="radio" checked>
+                                <label for="male">Male</label>
+                                <input id="female" name="gender" type="radio">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-subrow">
+                            <label for="email">Email Address</label>
+                            <input id="email" type="email" placeholder="e.g. abc@your-domain.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-subrow">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" type="tel" placeholder="+00 000 000 0000">
+                        </div>
+                        <div class="form-subrow">
+                            <label for="github">Github Repo Url</label>
+                            <input id="github" type="url" placeholder="e.g. https://github.com/xyz">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-subrow">
+                            <label for="date">Date of Joining</label>
+                            <input id="date" type="date">
+                        </div>
+                        <div class="form-subrow">
+                            <label for="lname">Course</label>
+                            <div class="radio-container">
+                                <input id="java" name="course" type="radio" checked>
+                                <label for="java">Java</label>
+                                <input id="python" name="course" type="radio">
+                                <label for="python">Python</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-subrow">
+                            <input id="resume" type="file">
+                            <label id="resume-label" for="resume">Upload Resume</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-subrow">
+                            <input class="submit" type="submit" value="Register">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="bg_img"></div>
+    </div>
+
+</body>
+
+</html>

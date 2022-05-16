@@ -1,0 +1,111 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    font-size: 16px;
+}
+
+body {
+    background-color: #fff;
+}
+h2 {
+    font-size: 22px;
+}
+#flex {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#content {
+    position: relative;
+    order: 1;
+    flex-basis: 80%;
+    background-color: blanchedalmond;
+}
+
+#bg_img {
+    order: 2;
+    flex-basis: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("bg_1.jpg");
+}
+
+.form {
+    position: absolute;
+    left: 20%;
+    top: 80px;
+    width: 60%;
+}
+
+.form p {
+    margin: 15px 0px;
+    color: #b3b3b3;
+}
+
+.form-row {
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-subrow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-subrow label {
+    padding-bottom: 5px;
+}
+
+.form-subrow input {
+    width: 80%;
+    padding: 0px 10px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0px 1px 2px 0px;
+    border-radius: 4px;
+    height: 44px;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: left;
+    padding-top: 10px;
+}
+
+.radio-container input {
+    width: 10%;
+    height: 18px;
+    box-shadow: none;
+}
+
+.form-subrow .submit {
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: #fb771a;
+    width: 26%;
+    color: white;
+}
+#resume {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+}
+#resume-label {
+    width: 26%;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 0px;
+    background-color: white;
+    color: rgb(109, 109, 109);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
