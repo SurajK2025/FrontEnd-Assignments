@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #FE4880;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            margin: 5% 15%;
+            padding: 1% 2%;
+            border-radius: 4px;
+            background-color: #1E306E;
+            box-shadow: 0 0.25rem 0.45rem 0 rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        form p {
+            text-align: center;
+            font-size: 20px;
+            margin: 1% 0px;
+        }
+
+        input {
+            transition: 0.8s;
+            color: black;
+            border-radius: 4px;
+            height: 25px;
+            padding: 4px;
+            outline: none;
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        textarea {
+            color: black;
+            transition: 0.8s;
+            border-radius: 4px;
+            outline: none;
+            resize: none;
+        }
+
+        select {
+            padding: 1px 4px;
+            color: black;
+            width: 35%;
+            height: 35px;
+            border-radius: 4px;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border: 3px solid #FE4880;
+        }
+
+        input[id="typeOfProb"] {
+            width: 60%;
+        }
+
+        input[type="submit"] {
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #FE4880;
+            color: white;
+            width: 30%;
+            height: 35px;
+            padding: 4px;
+        }
+
+        input[type="submit"]:hover {
+            box-shadow: 0 0.1rem 0.45rem 0 rgba(0, 0, 0, 0.1);
+            transform: scale(1.05);
+        }
+
+        input[type="radio"] {
+            accent-color: #FE4880;
+        }
+
+        .row {
+            width: 100%;
+            margin: 5px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 2px;
+        }
+
+        .bi-row {
+            margin: 5px 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 5%;
+        }
+
+        .radio {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 2px;
+        }
+
+        .submit {
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="mailto:someone@example.com">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, libero quibusdam! Cum, numquam. Itaque
+            sapiente, iure alias cum minus eveniet repudiandae nobis.</p>
+
+        <div class="row">
+            <label for="typeOfProb">Type of Problem</label>
+            <input type="text" name="" id="typeOfProb" placeholder="Missing Product, Website Down, etc" required>
+        </div>
+
+        <div class="bi-row">
+            <div class="row">
+                <label for="uname">Username</label>
+                <input type="text" name="" id="uname" placeholder="Alex Green" required>
+            </div>
+
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+        </div>
+
+        <div class="bi-row">
+            <div class="row">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+00 00000 00000">
+            </div>
+
+            <div class="row">
+                <label for="loc">Location</label>
+                <select name="" id="loc">
+                    <option value="pune">Pune</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="latur">Latur</option>
+                    <option value="nagpur">Nagpur</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="desc">Description</label>
+            <textarea name="desc" id="desc" cols="30" rows="3"></textarea>
+        </div>
+
+
+        <div class="bi-row">
+            <label for="solved">Problem Solved?</label>
+            <div class="radio"><input type="radio" name="solved" id="" value="yes">Yes</div>
+            <div class="radio"><input type="radio" name="solved" id="" value="no">No</div>
+        </div>
+
+        <div class="row submit">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>

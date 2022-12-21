@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Login Form</title>
+
+    <style>
+        * {
+            font-family: 'Dancing Script', cursive;
+            scrollbar-width: thin;
+            scrollbar-color: #5D001E white;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-size: 20px;
+            background-color: #1A1A1D;
+        }
+
+        .parent {
+            border-collapse: collapse;
+            border-radius: 12px;
+            margin: 7% 20%;
+            background-color: #950740;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left {
+            color: black;
+            padding: 20px;
+            width: calc(100%/2);
+        }
+
+        .left form {
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+        }
+
+        .left h2 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .left small {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        .left input {
+            transition: all .3s ease-in-out;
+            padding: 2px 10px;
+            border-radius: 5px;
+            height: 30px;
+            width: 60%;
+            outline: none
+        }
+
+        .left input:hover {
+            box-shadow: 2px 2px 3px black;
+        }
+
+        .left input:focus {
+            border: 2px solid #5D001E;
+        }
+
+        .left input[type="submit"] {
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            background-color: #5D001E;
+        }
+
+        .left input[type="submit"]:hover {
+            transform: scale(1.02);
+        }
+
+        .right {
+            border-radius: 12px;
+            background-color: #5D001E;
+            color: white;
+            padding: 15% 20px;
+            width: calc(100%/2);
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .right button {
+            font-size: 14px;
+            color: #5D001E;
+            font-weight: bold;
+            height: 25px;
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="left">
+            <form action="" autocomplete="off">
+                <h2>Create New Account</h2>
+                <input type="text" name="uname" id="uname" placeholder="Username" required autofocus>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="pass" id="pass" placeholder="Password" required>
+                <small style="color: white;"><input type="checkbox" name="condition" id="condition" style="width: auto;"
+                        autocomplete="on">
+                    <label for="condition">I agree all terms and conditions</label>
+                </small>
+                <input type="submit" name="submit" value="Create Account" id="submit">
+            </form>
+        </div>
+        <div class="right">
+            <h1>Hello World</h1>
+            <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum esse eum maiores amet
+                voluptatibus
+                nesciunt expedita sit quae, hic repellendus, commodi accusamus numquam, facilis ullam sapiente autem.
+                Nam, beatae molestias.</p>
+            <button id="learnmore">Learn More</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function (event) {
+            console.log("Left btn clicked");
+            console.log(event);
+            event.preventDefault();
+        });
+
+        const learnmoreBtn = document.getElementById("learnmore").addEventListener("click", function () {
+            console.log("Right btn clicked");
+            console.log(event);
+        });
+    </script>
+
+</body>
+
+</html>
